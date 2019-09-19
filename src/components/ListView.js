@@ -7,7 +7,7 @@ const ListView = (props) => {
     const renderRowById = (renderRow, rowsById, rowId) => {
         return (
             <li key={rowId}>
-                {renderRow(_.get(rowsById, rowId))}
+                {renderRow(rowId, _.get(rowsById, rowId))}
             </li>
         )
     }
