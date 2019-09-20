@@ -41,6 +41,10 @@ const TopicsScreen = (props) => {
         )
     }
 
+    const onNextScreenClick = () => {
+        dispatch(topicsActions.finalizeTopicsSelection())
+    }
+
     if (!props.rowsById) {
         console.log('loading...')
         return renderLoading()
@@ -52,6 +56,9 @@ const TopicsScreen = (props) => {
                 rowsIdArray={props.rowsIdArray}
                 rowsById={props.rowsById}
                 renderRow={renderRow} />
+
+            {props.canFinalizeSelction &&
+                <button className='NextScreen' onClick={onNextScreenClick} />}
         </div>
     )
 
@@ -63,7 +70,8 @@ const mapStateToProps = (state) => {
     return {
         rowsById: topicsSelectors.getTopicsByUrl(state),
         rowsIdArray: topicsSelectors.getTopicsUrlArray(state),
-        selectedIdsMap: topicsSelectors.getSelectedTopicUrlsMap(state)
+        selectedIdsMap: topicsSelectors.getSelectedTopicUrlsMap(state),
+        canFinalizeSelction: topicsSelectors.isTopicSelectionValid(state)
     }
 }
 

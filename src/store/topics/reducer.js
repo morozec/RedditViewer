@@ -4,7 +4,8 @@ import _ from 'lodash';
 
 const initialState = Immutable({
     topicsByUrl: undefined,
-    selectedTopicUrls: []
+    selectedTopicUrls: [],
+    selectionFinalized: false
 })
 
 export default function reduce(state = initialState, action = {}) {
@@ -16,6 +17,10 @@ export default function reduce(state = initialState, action = {}) {
         case types.TOPICS_SELECTED:
             return state.merge({
                 selectedTopicUrls: action.selectedTopicUrls
+            })
+        case types.TOPICS_SELECTION_FINILIZED:
+            return state.merge({
+                selectionFinalized: true
             })
         default:
             return state
@@ -38,3 +43,7 @@ export const getSelectedTopicUrls = (state) => {
 export const getSelectedTopicUrlsMap = (state) => {
     return _.keyBy(state.topics.selectedTopicUrls)
 }
+
+export const isTopicSelectionValid = (state) => state.topics.selectedTopicUrls.length === 3
+
+export const isTopicSelectionFinalized = (state) => state.topics.selectionFinalized

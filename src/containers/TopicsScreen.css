@@ -13,5 +13,32 @@
   .TopicsScreen li {
     text-align: left;
     border-bottom: 1px solid #aaa;
+    cursor: pointer;
+  }
+  
+  .TopicsScreen li > div {
     padding-left: 20px;
+  }
+  
+  .TopicsScreen li h3 {
+    padding: 10px 0 0 0;
+    margin: 0;
+  }
+  
+  .TopicsScreen li p {
+    padding: 10px 0;
+    margin: 0;
+  }
+  
+  .NextScreen {
+    position: fixed;
+    top: 50%;
+    right: calc((100vw - 640px)/2 - 90px);
+    background: url('../img/right_arrow.png');
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+    border: 0;
+    cursor: pointer;
+    outline: none;
   }

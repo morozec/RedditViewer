@@ -1,13 +1,25 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import './App.css';
 import TopicsScreen from './containers/TopicsScreen';
+import PostsSreen from './containers/PostsScreen';
+import * as topicsSelectors from './store/topics/reducer';
 
-function App() {
+const App = (props) => {
   return (
     <div className="App">
-      <TopicsScreen/>
+      {!props.isSelectionFinilized ?
+        <TopicsScreen /> :
+        <PostsSreen />
+      }
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    isSelectionFinilized: topicsSelectors.isTopicSelectionFinalized(state)
+  }
+}
+
+export default connect(mapStateToProps)(App);
