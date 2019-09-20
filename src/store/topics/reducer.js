@@ -40,9 +40,9 @@ export const getSelectedTopicUrls = (state) => {
     return state.topics.selectedTopicUrls;
 }
 
-export const getSelectedTopicUrlsMap = (state) => {
-    return _.keyBy(state.topics.selectedTopicUrls)
-}
+export function getSelectedTopicsByUrl(state) {
+    return _.mapValues(_.keyBy(state.topics.selectedTopicUrls), (topicUrl) => state.topics.topicsByUrl[topicUrl]);
+  }
 
 export const isTopicSelectionValid = (state) => state.topics.selectedTopicUrls.length === 3
 

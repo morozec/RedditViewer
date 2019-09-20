@@ -27,7 +27,7 @@ const TopicsScreen = (props) => {
     }
 
     const renderRow = (rowId, row) => {
-        const selected = props.selectedIdsMap[rowId]
+        const selected = props.selectedRowsById[rowId]
         return (
             <ListRow
                 rowId={rowId}
@@ -70,7 +70,7 @@ const mapStateToProps = (state) => {
     return {
         rowsById: topicsSelectors.getTopicsByUrl(state),
         rowsIdArray: topicsSelectors.getTopicsUrlArray(state),
-        selectedIdsMap: topicsSelectors.getSelectedTopicUrlsMap(state),
+        selectedRowsById: topicsSelectors.getSelectedTopicsByUrl(state),
         canFinalizeSelction: topicsSelectors.isTopicSelectionValid(state)
     }
 }
