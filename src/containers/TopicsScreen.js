@@ -52,6 +52,7 @@ const TopicsScreen = (props) => {
 
     return (
         <div className='TopicsScreen'>
+             <h3>Choose 3 topics of interest</h3>
             <ListView
                 rowsIdArray={props.rowsIdArray}
                 rowsById={props.rowsById}

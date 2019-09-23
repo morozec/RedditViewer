@@ -61,7 +61,7 @@ const PostsSreen = (props) => {
                     rowsById={props.rowsById}
                     renderRow={renderRow} />
             </div>
-            <div className='Contentpage'>
+            <div className='ContentPane'>
                 <PostView post={props.currentPost} />
             </div>
         </div>
