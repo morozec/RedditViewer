@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/RedditViewer/static/css/main.1c98ee5f.chunk.css",
+    "main.js": "/RedditViewer/static/js/main.d07a3624.chunk.js",
+    "main.js.map": "/RedditViewer/static/js/main.d07a3624.chunk.js.map",
+    "runtime~main.js": "/RedditViewer/static/js/runtime~main.c04f8a06.js",
+    "runtime~main.js.map": "/RedditViewer/static/js/runtime~main.c04f8a06.js.map",
+    "static/js/2.47d6683e.chunk.js": "/RedditViewer/static/js/2.47d6683e.chunk.js",
+    "static/js/2.47d6683e.chunk.js.map": "/RedditViewer/static/js/2.47d6683e.chunk.js.map",
+    "index.html": "/RedditViewer/index.html",
+    "precache-manifest.f7c37394de646641dc3e4919eeca7e16.js": "/RedditViewer/precache-manifest.f7c37394de646641dc3e4919eeca7e16.js",
+    "service-worker.js": "/RedditViewer/service-worker.js",
+    "static/css/main.1c98ee5f.chunk.css.map": "/RedditViewer/static/css/main.1c98ee5f.chunk.css.map",
+    "static/media/TopicsScreen.css": "/RedditViewer/static/media/right_arrow.87e5943c.png"
+  }
+}
